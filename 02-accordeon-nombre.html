@@ -11,16 +11,16 @@
     <h1>Accordéon mémorisant par un nombre l'élèment ouvert</h1>
     <div class="accordeon" x-data="{ open: 0 }">
       <section>
-        <button>bouton 1</button>
-        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ex, magnam deserunt ratione impedit laboriosam, illo tenetur obcaecati voluptatem unde non odit dolorem in ad. Inventore esse nobis eos sapiente provident.</p>
+        <button @click="open = 1">bouton 1</button>
+        <p x-show="open===1" x-transition.duration.500m.scale.90.origin.left>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ex, magnam deserunt ratione impedit laboriosam, illo tenetur obcaecati voluptatem unde non odit dolorem in ad. Inventore esse nobis eos sapiente provident.</p>
       </section>
       <section>
-        <button>bouton 2</button>
-        <p>Magnam voluptas quibusdam consequuntur accusamus quos. Perferendis, eius at optio possimus nulla, ullam neque earum rerum tempora esse tenetur nam explicabo distinctio cupiditate eos incidunt accusantium enim quo maiores dolorem!</p>
+        <button @click="open = 2">bouton 2</button>
+        <p x-show="open===2" x-transition.duration.500m.scale.90.origin.left>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ex, magnam deserunt ratione impedit laboriosam, illo tenetur obcaecati voluptatem unde non odit dolorem in ad. Inventore esse nobis eos sapiente provident.</p>
       </section>
       <section>
-        <button>bouton 3</button>
-        <p>Reiciendis itaque neque deleniti dolorum ab odit impedit consequuntur, debitis obcaecati praesentium, in exercitationem quia rem similique, incidunt ad amet accusamus iure nemo sit. Doloremque, sapiente? Ab quaerat animi amet.</p>
+        <button @click="open = 3">bouton 3</button>
+        <p x-show="open===3" x-transition.duration.500m.scale.90.origin.left>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ex, magnam deserunt ratione impedit laboriosam, illo tenetur obcaecati voluptatem unde non odit dolorem in ad. Inventore esse nobis eos sapiente provident.</p>
       </section>
     </div>
   </body>
