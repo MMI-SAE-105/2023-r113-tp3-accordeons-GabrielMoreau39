@@ -18,9 +18,9 @@
         <button @click="open = ! open">bouton 2</button>
         <p x-show="open" x-transition>Nihil, et perferendis a commodi adipisci molestias odit expedita assumenda aliquam. Recusandae fugiat aliquam nobis ab, quas incidunt porro unde molestias numquam, consequuntur optio saepe minus delectus explicabo cupiditate architecto!</p>
       </section>
-      <section>
-        <button>bouton 3</button>
-        <p>Nihil, necessitatibus minus cum ullam nobis quasi nesciunt officiis quis libero voluptatum odit voluptates sed mollitia ad corrupti dolorum iusto explicabo, itaque fuga. Officiis consectetur amet ipsum aut eos nulla!</p>
+      <section x-data="{ open: false }">
+        <button @click="open = ! open">bouton 3</button>
+        <p x-show="open" x-transition>Nihil, necessitatibus minus cum ullam nobis quasi nesciunt officiis quis libero voluptatum odit voluptates sed mollitia ad corrupti dolorum iusto explicabo, itaque fuga. Officiis consectetur amet ipsum aut eos nulla!</p>
       </section>
     </div>
   </body>
