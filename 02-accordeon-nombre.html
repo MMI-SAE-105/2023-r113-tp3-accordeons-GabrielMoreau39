@@ -12,15 +12,15 @@
     <div class="accordeon" x-data="{ open: 0 }">
       <section>
         <button @click="open = 1">bouton 1</button>
-        <p x-show="open===1" x-transition.duration.500m.scale.90.origin.left>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ex, magnam deserunt ratione impedit laboriosam, illo tenetur obcaecati voluptatem unde non odit dolorem in ad. Inventore esse nobis eos sapiente provident.</p>
+        <p x-show="open===1" x-collapse>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ex, magnam deserunt ratione impedit laboriosam, illo tenetur obcaecati voluptatem unde non odit dolorem in ad. Inventore esse nobis eos sapiente provident.</p>
       </section>
       <section>
         <button @click="open = 2">bouton 2</button>
-        <p x-show="open===2" x-transition.duration.500m.scale.90.origin.left>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ex, magnam deserunt ratione impedit laboriosam, illo tenetur obcaecati voluptatem unde non odit dolorem in ad. Inventore esse nobis eos sapiente provident.</p>
+        <p x-show="open===2" x-collapse>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ex, magnam deserunt ratione impedit laboriosam, illo tenetur obcaecati voluptatem unde non odit dolorem in ad. Inventore esse nobis eos sapiente provident.</p>
       </section>
       <section>
         <button @click="open = 3">bouton 3</button>
-        <p x-show="open===3" x-transition.duration.500m.scale.90.origin.left>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ex, magnam deserunt ratione impedit laboriosam, illo tenetur obcaecati voluptatem unde non odit dolorem in ad. Inventore esse nobis eos sapiente provident.</p>
+        <p x-show="open===3" x-collapse>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ex, magnam deserunt ratione impedit laboriosam, illo tenetur obcaecati voluptatem unde non odit dolorem in ad. Inventore esse nobis eos sapiente provident.</p>
       </section>
     </div>
   </body>
