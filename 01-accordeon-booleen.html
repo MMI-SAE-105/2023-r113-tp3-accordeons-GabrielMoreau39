@@ -14,9 +14,9 @@
         <button @click="open = ! open">bouton 1</button>
         <p x-show="open" x-transition>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Commodi provident placeat quaerat laborum? Repellat explicabo aliquid nesciunt, officiis velit exercitationem, repudiandae distinctio, iusto consequuntur ipsam sit necessitatibus? Nobis, commodi placeat?</p>
       </section>
-      <section>
-        <button>bouton 2</button>
-        <p>Nihil, et perferendis a commodi adipisci molestias odit expedita assumenda aliquam. Recusandae fugiat aliquam nobis ab, quas incidunt porro unde molestias numquam, consequuntur optio saepe minus delectus explicabo cupiditate architecto!</p>
+      <section x-data="{ open: false }">
+        <button @click="open = ! open">bouton 2</button>
+        <p x-show="open" x-transition>Nihil, et perferendis a commodi adipisci molestias odit expedita assumenda aliquam. Recusandae fugiat aliquam nobis ab, quas incidunt porro unde molestias numquam, consequuntur optio saepe minus delectus explicabo cupiditate architecto!</p>
       </section>
       <section>
         <button>bouton 3</button>
