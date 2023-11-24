@@ -12,7 +12,7 @@
      margin: 0;/* pour éviter les marges par défaut */
      padding: 0;/* pour éviter les "padding" par défaut */}
       #accordeon li {
-     width: 107;/* largeur de chaque élément replié 107px */
+     width: 107px;/* largeur de chaque élément replié 107px */
      overflow: hidden;/* pour cacher le contenu dépassant de l'élément */
      transition: width 0.5s ease-in-out;/* pour l'animation, transition sur width */
      background-color: lightgray;/* couleur de fond #eee */
@@ -44,8 +44,9 @@
   <body>
     <h1>Accordéon horizontal</h1>
     
-<ul id="accordeon">
-  <li>
+<ul id="accordeon" x-data="{isOpen: 1,}">
+  <li :class="{actif:isOpen === 1,}" @click="isOpen= 1"
+  >
     <figure>
       <img src="https://picsum.photos/100?random=1" alt="" width="102">
       <figcaption>
@@ -54,7 +55,8 @@
       </figcaption>
     </figure>
   </li>
-  <li class="actif">
+  <li :class="{actif:isOpen === 2,}" @click="isOpen= 2"
+  >
     <figure>
       <img src="https://picsum.photos/100?random=2" alt="" width="102">
       <figcaption>
@@ -63,7 +65,8 @@
       </figcaption>
     </figure>
   </li>
-  <li>
+  <li :class="{actif:isOpen === 3,}" @click="isOpen= 3"
+  >
     <figure>
       <img src="https://picsum.photos/100?random=3" alt="" width="102">
       <figcaption>
