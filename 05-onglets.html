@@ -7,34 +7,31 @@
     <title>Onglets</title>
     <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
     </head>
-    <style>
-      
-    </style>
      
     <body>
-    <h1>Onglets</h1>
-    <div id="onglets" :class="{
-      ouvert : 1,
-     }">
-     <ul role="tablist">
-      <li role="tab"><button @click="{actif:ouvert=1 }">Onglet 1</button></li> 
-      <li role="tab"><button @click="{actif:ouvert=2 }">Onglet 2</button></li> 
-      <li role="tab"><button @click="{actif:ouvert=3 }">Onglet 3</button></li> 
-     </ul>  
-     <div>
-      <div role="tabpanel" :class="{actif:ouvert === 1,}">
-        <h1>Panneau 1</h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat natus accusantium vitae culpa sapiente quam harum possimus! Nobis beatae consequatur quas nihil ad et incidunt earum enim, quam eligendi. Nulla.</p>
+      <h1>Onglets</h1>
+      <div id="onglets" :class="{
+        ouvert : 1,
+      }">
+      <ul role="tablist">
+        <li role="tab" :class="{actif:ouvert===1 }" @click="ouvert=1" class="actif">Onglet 1</li> 
+        <li role="tab" :class="{actif:ouvert===2 }" @click="ouvert=2" class="actif">Onglet 2</li> 
+        <li role="tab" :class="{actif:ouvert===3 }" @click="ouvert=3" class="actif">Onglet 3</li> 
+      </ul>  
+      <div>
+        <div role="tabpanel" :class="{actif:ouvert === 1,}">
+          <h1>Panneau 1</h1>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat natus accusantium vitae culpa sapiente quam harum possimus! Nobis beatae consequatur quas nihil ad et incidunt earum enim, quam eligendi. Nulla.</p>
+        </div>
+        <div role="tabpanel" :class="{actif:ouvert === 2,}">
+         <h1>Panneau 2</h1>
+         <p>Repellat possimus dignissimos aperiam sit nihil velit consequatur dolorem corporis labore placeat, quod inventore, id doloribus consequuntur incidunt eius quaerat. Iure adipisci eum reprehenderit voluptatibus nulla saepe deleniti tenetur porro!</p>
+        </div>
+        <div role="tabpanel" :class="{actif:ouvert === 3,}">
+         <h1>Panneau 3</h1>
+         <p>Blanditiis doloribus ex fugiat veritatis, vitae nemo dignissimos velit dolorum voluptate eius? Neque eaque tenetur numquam exercitationem eum tempora. Illum error unde, atque iste quod delectus perferendis dolores sed facere.</p>
+        </div>
       </div>
-      <div role="tabpanel" :class="{actif:ouvert === 2,}">
-        <h1>Panneau 2</h1>
-        <p>Repellat possimus dignissimos aperiam sit nihil velit consequatur dolorem corporis labore placeat, quod inventore, id doloribus consequuntur incidunt eius quaerat. Iure adipisci eum reprehenderit voluptatibus nulla saepe deleniti tenetur porro!</p>
       </div>
-      <div role="tabpanel" :class="{actif:ouvert === 3,}">
-        <h1>Panneau 3</h1>
-        <p>Blanditiis doloribus ex fugiat veritatis, vitae nemo dignissimos velit dolorum voluptate eius? Neque eaque tenetur numquam exercitationem eum tempora. Illum error unde, atque iste quod delectus perferendis dolores sed facere.</p>
-      </div>
-     </div>
-    
     </body>
 </html>
