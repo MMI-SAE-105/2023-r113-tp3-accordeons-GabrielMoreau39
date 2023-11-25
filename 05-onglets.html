@@ -18,20 +18,20 @@
       ouvert : 1,
      }">
      <ul role="tablist">
-      <li role="tab"><button @click="1">Onglet 1</button></li> 
-      <li role="tab"><button @click="2">Onglet 2</button></li> 
-      <li role="tab"><button @click="3">Onglet 3</button></li> 
+      <li role="tab"><button @click="ouvre=1 ">Onglet 1</button></li> 
+      <li role="tab"><button @click="ouvre=2 ">Onglet 2</button></li> 
+      <li role="tab"><button @click="ouvre=3 ">Onglet 3</button></li> 
      </ul>  
      <div>
-      <div role="tabpanel" x-show="ouvert === 1">
+      <div role="tabpanel" :class="{actif:ouvre === 1,}">
         <h1>Panneau 1</h1>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat natus accusantium vitae culpa sapiente quam harum possimus! Nobis beatae consequatur quas nihil ad et incidunt earum enim, quam eligendi. Nulla.</p>
       </div>
-      <div role="tabpanel" x-show="ouvert === 2">
+      <div role="tabpanel" :class="{actif:ouvre === 2,}">
         <h1>Panneau 2</h1>
         <p>Repellat possimus dignissimos aperiam sit nihil velit consequatur dolorem corporis labore placeat, quod inventore, id doloribus consequuntur incidunt eius quaerat. Iure adipisci eum reprehenderit voluptatibus nulla saepe deleniti tenetur porro!</p>
       </div>
-      <div role="tabpanel" x-show="ouvert === 3">
+      <div role="tabpanel" :class="{actif:ouvre === 3,}">
         <h1>Panneau 3</h1>
         <p>Blanditiis doloribus ex fugiat veritatis, vitae nemo dignissimos velit dolorum voluptate eius? Neque eaque tenetur numquam exercitationem eum tempora. Illum error unde, atque iste quod delectus perferendis dolores sed facere.</p>
       </div>
