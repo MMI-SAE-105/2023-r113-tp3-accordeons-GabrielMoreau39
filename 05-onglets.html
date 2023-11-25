@@ -8,21 +8,7 @@
     <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
     </head>
     <style>
-      body li {
-        list-style: none;
-      } 
-      #onglets div{
-        position: relative;
-        height: 200px;
-        width: 200px;
-      }
-      #onglets div> * {
-        position: absolute;
-        opacity: 0;
-      }
-      [role=tabpanel].actif {
-        opacity: 1;
-      }
+      
     </style>
      
     <body>
@@ -31,9 +17,9 @@
       ouvert : 1,
      }">
      <ul role="tablist">
-      <li role="tab"><button @click="ouvert=1 ">Onglet 1</button></li> 
-      <li role="tab"><button @click="ouvert=2 ">Onglet 2</button></li> 
-      <li role="tab"><button @click="ouvert=3 ">Onglet 3</button></li> 
+      <li role="tab"><button @click="{actif:ouvert=1 }">Onglet 1</button></li> 
+      <li role="tab"><button @click="{actif:ouvert=2 }">Onglet 2</button></li> 
+      <li role="tab"><button @click="{actif:ouvert=3 }">Onglet 3</button></li> 
      </ul>  
      <div>
       <div role="tabpanel" :class="{actif:ouvert === 1,}">
