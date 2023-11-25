@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="/05-onglets.html">
     <title>Onglets</title>
     <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
     <style>
@@ -30,19 +31,27 @@
       #onglets div {
         padding: 1rem;
       }
+      #onglets div div {
+        display: none;
+        position: absolute;
+        border: 2px solid rgb(0, 0, 0);
+      }
+      #onglets div div.actif {
+        display: block;
+      }
 
     </style>
     </head>
      
     <body>
       <h1>Onglets</h1>
-      <div id="onglets" :class="{
+      <div id="onglets" x-data="{
         ouvert : 1,
       }">
       <ul role="tablist">
-        <li role="tab" :class="{actif:ouvert===1 }" @click="ouvert=1">Onglet 1</li> 
-        <li role="tab" :class="{actif:ouvert===2 }" @click="ouvert=2">Onglet 2</li> 
-        <li role="tab" :class="{actif:ouvert===3 }" @click="ouvert=3">Onglet 3</li> 
+        <li role="tab" :class="{actif:ouvert===1 }" @click="ouvert=1" class>Onglet 1</li> 
+        <li role="tab" :class="{actif:ouvert===2 }" @click="ouvert=2" class>Onglet 2</li> 
+        <li role="tab" :class="{actif:ouvert===3 }" @click="ouvert=3" class>Onglet 3</li> 
       </ul>  
       <div>
         <div role="tabpanel" :class="{actif:ouvert === 1,}">
